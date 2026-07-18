@@ -1,0 +1,19 @@
+ROUTINE RunScript
+ #; We will run this routine to do the benchmark
+Run()
+{
+ Do ##class(%File).CreateDirectoryChain("/home/irisowner/dev/data/out")
+ Set sys = ##class(%SYS.Python).Import("sys")
+ Do sys.path."append"("/home/irisowner/dev/src")
+
+ #; Start time
+ Set startTime = $ZHOROLOG
+
+ Set proc = ##class(%SYS.Python).Import("process")
+ Do proc.run()
+
+ #; End time
+ Set endTime = $ZHOROLOG
+ Set elapsed = endTime - startTime
+ Write "Elapsed time: ", elapsed, " seconds", !
+}
