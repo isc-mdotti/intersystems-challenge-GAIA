@@ -9,7 +9,7 @@ Run()
  #; Start time
  Set startTime = $ZHOROLOG
 
- Set proc = ##class(%SYS.Python).Import("process")
+ Set proc = ##class(%SYS.Python).Import("processV9")
  Do proc.run()
 
  #; End time

@@ -26,3 +26,8 @@ src/__pycache__
 .devcontainer/
 .github/
 .vscode/
+src/gaia.c
+src/processV2.py
+src/processV3.py
+src/processV4.py
+src/RunScriptBench.mac
